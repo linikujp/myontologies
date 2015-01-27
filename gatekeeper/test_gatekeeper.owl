@@ -1,0 +1,630 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://purl.obolibrary.org/obo/gatekeepertest.owl#"
+     xml:base="http://purl.obolibrary.org/obo/gatekeepertest.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/gatekeepertest.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GATEK_0000002 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/GATEK_0000002">
+        <rdfs:label xml:lang="en">has role</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GATEK_0000006 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/GATEK_0000006">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="en">occupies amino acid location</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000012"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GATEK_0000007 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/GATEK_0000007">
+        <rdfs:label xml:lang="en">occupies spatial region at some time</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GATEK_0000009 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/GATEK_0000009">
+        <rdfs:label xml:lang="en">has spatial occupant at some time</rdfs:label>
+        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000007"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GATEK_0000010 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/GATEK_0000010">
+        <rdfs:label xml:lang="en">has occupant residue</rdfs:label>
+        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000006"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000011"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GATEK_0000011 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/GATEK_0000011">
+        <rdfs:label xml:lang="en">has occupant protein sequence</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000009"/>
+        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000012"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GATEK_0000012 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/GATEK_0000012">
+        <rdfs:label xml:lang="en">occupies sequence region in a protein sequence</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000007"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GATEK_0000014 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/GATEK_0000014">
+        <rdfs:label xml:lang="en">has quality</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GATEK_0000023 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/GATEK_0000023">
+        <rdfs:label xml:lang="en">lacks_part</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GATEK_0000045 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/GATEK_0000045">
+        <rdfs:label xml:lang="en">has part</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GATEK_0000048 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/GATEK_0000048">
+        <rdfs:label xml:lang="en">has mutation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GATEK_0000046 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/GATEK_0000046">
+        <rdfs:label xml:lang="en">located in aa sequence of protein</rdfs:label>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000001"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GATEK_0000001 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GATEK_0000001">
+        <rdfs:label xml:lang="en">gatekeeper residue</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GATEK_0000052"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000002"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000003"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000052"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000006"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000005"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GATEK_0000003 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GATEK_0000003">
+        <rdfs:label xml:lang="en">gatekeeper role</rdfs:label>
+        <rdfs:comment>is a BFO:role</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GATEK_0000004 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GATEK_0000004">
+        <rdfs:label xml:lang="en">amino acid sequence location</rdfs:label>
+        <rdfs:comment>a location occpied by a residue in a wild type protein, which is designated by the numerical sequencial position in the case of wild type protein. In the case of subsititue mutation, this location is occupied by a mutated residue. NOTE: The first amino acid in the chain should be considered as having position 1.</rdfs:comment>
+        <rdfs:comment>is a BFO:three-dimensional spatial region</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GATEK_0000005 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GATEK_0000005">
+        <rdfs:label xml:lang="en">gatekeeper location</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GATEK_0000004"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000010"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000001"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000004"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GATEK_0000008 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GATEK_0000008">
+        <rdfs:label xml:lang="en">135 in ABL1 amino acid sequence</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000004"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000010"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000051"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GATEK_0000013 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GATEK_0000013">
+        <rdfs:label xml:lang="en">mutated quality</rdfs:label>
+        <rdfs:comment>is a BFO:quality</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GATEK_0000015 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GATEK_0000015">
+        <rdfs:label xml:lang="en">I135 residue in ABL1_T135I</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000018"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000045"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000047"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000006"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000008"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000014"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000013"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000006"/>
+                <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000008"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000051"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GATEK_0000016 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GATEK_0000016">
+        <rdfs:label xml:lang="en">mutated kinase</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GATEK_0000041"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000045"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000050"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000041"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GATEK_0000017 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GATEK_0000017">
+        <rdfs:label xml:lang="en">mutated gatekeeper residue</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GATEK_0000050"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000006"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000005"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000052"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GATEK_0000018 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GATEK_0000018">
+        <rdfs:label xml:lang="en">I residue</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000052"/>
+        <rdfs:comment>will be replaced by http://purl.obolibrary.org/obo/CHEBI_32615</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GATEK_0000019 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GATEK_0000019">
+        <rdfs:label xml:lang="en">kinase with gatekeeper residue</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GATEK_0000041"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000045"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000001"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000041"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GATEK_0000020 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GATEK_0000020">
+        <rdfs:label xml:lang="en">ABL1_Y253F</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000041"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000045"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000026"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000023"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000022"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GATEK_0000021 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GATEK_0000021">
+        <rdfs:label xml:lang="en">Y residue</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000052"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GATEK_0000022 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GATEK_0000022">
+        <rdfs:label xml:lang="en">Y253 residue in ABL1</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000021"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000006"/>
+                <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000024"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000045"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000044"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GATEK_0000024 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GATEK_0000024">
+        <rdfs:label xml:lang="en">253 in ABL1 amino acid sequence</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000004"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GATEK_0000025 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GATEK_0000025">
+        <rdfs:label xml:lang="en">F residue</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000052"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GATEK_0000026 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GATEK_0000026">
+        <rdfs:label xml:lang="en">F253 residue in ABL1_Y253F</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000025"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000006"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000024"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000045"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000020"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000006"/>
+                <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000024"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000014"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000013"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GATEK_0000041 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GATEK_0000041">
+        <rdfs:label xml:lang="en">kinase</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000045"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000052"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>definition is missing.</rdfs:comment>
+        <rdfs:comment>is a PR:protein</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GATEK_0000043 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GATEK_0000043">
+        <rdfs:label xml:lang="en">kinase with gatekeeper mutation</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GATEK_0000041"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000045"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000017"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000041"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GATEK_0000044 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GATEK_0000044">
+        <rdfs:label xml:lang="en">ABL1</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000041"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000045"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000022"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000045"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000051"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GATEK_0000047 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GATEK_0000047">
+        <rdfs:label xml:lang="en">ABL1_T135I</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000041"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000023"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000051"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000045"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GATEK_0000015"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000014"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000013"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GATEK_0000049 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GATEK_0000049">
+        <rdfs:label xml:lang="en">T residue</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000052"/>
+        <rdfs:comment>will be replaced by http://purl.obolibrary.org/obo/CHEBI_32835</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GATEK_0000050 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GATEK_0000050">
+        <rdfs:label xml:lang="en">I residue</rdfs:label>
+        <rdfs:label xml:lang="en">mutated residue</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GATEK_0000052"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000014"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000013"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000052"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GATEK_0000051 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GATEK_0000051">
+        <rdfs:label xml:lang="en">T135 residue in ABL1</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000049"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000045"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000044"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000002"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000003"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000006"/>
+                <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GATEK_0000008"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GATEK_0000052 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GATEK_0000052">
+        <rdfs:label xml:lang="en">amino acid residue</rdfs:label>
+        <rdfs:comment>will be replaced by http://purl.obolibrary.org/obo/CHEBI_33708</rdfs:comment>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+
